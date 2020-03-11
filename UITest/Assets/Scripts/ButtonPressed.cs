@@ -10,6 +10,7 @@ public class ButtonPressed : MonoBehaviour
     public Button button2;
     public Button button3;
 
+
     public string scene1;
 
     private void Start()
