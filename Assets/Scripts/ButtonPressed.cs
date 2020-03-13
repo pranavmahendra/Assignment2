@@ -10,9 +10,6 @@ public class ButtonPressed : MonoBehaviour
     public Button button2;
     public Button button3;
 
-
-    public string scene1;
-
     private void Start()
     {
         button1.onClick.AddListener(onButtonClick1);
@@ -23,20 +20,27 @@ public class ButtonPressed : MonoBehaviour
     private void onButtonClick1()
     {
         Debug.Log("Button1 Clicked.");
-        SceneManager.LoadScene(scene1);
+        loadAnyLevel(0);
 
     }
 
     private void onButtonClick2()
     {
         Debug.Log("Button2 Clicked.");
+        loadAnyLevel(1);
 
     }
 
     private void onButtonClick3()
     {
         Debug.Log("Button3 Clicked.");
+        loadAnyLevel(2);
 
+    }
+
+    public void loadAnyLevel(int sceneNumber)
+    {
+        SceneManager.LoadScene(sceneNumber);
     }
 
 }

@@ -8,6 +8,7 @@ public class BackButton : MonoBehaviour
 {
     public Button Back1;
 
+
     public string scene;
 
     private void Start()
@@ -17,6 +18,14 @@ public class BackButton : MonoBehaviour
 
     private void onBackClick()
     {
-        SceneManager.LoadScene("scene");
+
+        backMenu(1);
+      
+        
+    }
+
+    public void backMenu(int menuScreen)
+    {
+        SceneManager.LoadScene(menuScreen);
     }
 }
